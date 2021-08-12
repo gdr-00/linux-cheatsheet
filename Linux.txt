@@ -1,0 +1,45 @@
+Install snap
+Install timeshift!!!
+
+Check file sistems
+tune2fs -c 3 /dev/mmcblkp02
+
+allow autocorrection
+nano /etc/default/rcS => FSCKFIX=yes
+
+shut down
+sudo halt
+
+non upgrade a package
+sudo apt-mark hold <package>
+
+upgrade a package fixed
+sudo apt-mark unhold <package>
+
+Initial mods
+sudo adduser "nome"
+sudo adduser "nome" sudo
+
+sudo deluser -remove-home pi
+sudo nano /etc/sudoers.d/010_pi-nopasswd
+xxx ALL=(ALL) PASSWD: ALL
+
+Open VPN
+sudo openvpn --config /directory/nome file.ovpn
+
+Compress / extract
+tar -czvf nome.tar.gz /percorsofile/nomefile-o-cartella
+tar -xzvf nome.tar.gz
+
+userdel -r/ adduser "nome"
+
+chiave ssh
+client :ssh-keygen -t rsa
+		ssh-copy-id -i ~/.ssh/id_rsa.pub user@server
+		eval `ssh-agent`
+		ssh-add ~/.ssh/id_rsa
+
+Compress a file
+tar -czf nome.tar.gz directory
+Decompress a file
+tar -xzf nome.tar.gz
