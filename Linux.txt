@@ -45,3 +45,5 @@ Decompress a file
 tar -xzf nome.tar.gz
 
 find . -name "*.zip" | xargs -P 5 -I filename sh -c 'unzip -o -d "$(dirname "filename")" "filename"' //unzippa in più processi tutti i file .zip che trovano all'interno della corrente cartella nelle roro rispettive sottocartelle
+
+fwupdmgr to manage firmware updates for devices
