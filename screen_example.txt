@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#DISPLAY=:0.0 chromium-browser https://stackoverflow.com/ --disable-quic --enable-tcp-fast-open --disable-gpu-compositing --start-fullscreen"
+RANDOM=$$
+R=$(($RANDOM%30))
+
+sleep $R"m" #sleep di un numero random tra 0 e 29 minuti
+
+screen -dmS stovf sh
+screen -S stovf -X stuff $"DISPLAY=:0.0 chromium-browser https://stackoverflow.com/\n"
+
+RA=$(($RANDOM%20))
+
+sleep $RA"m" #sleep di un numero random tra 0 e 19 minuti
+screen -S stovf -p 0 -X quit
