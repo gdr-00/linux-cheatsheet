@@ -55,3 +55,4 @@ Windows: "route add your.ec2.ip.address mask 255.255.255.255 the.remote.pptp.add
 screen 
 screen -dmS nome_screen sh
 screen -S nome_screen -X stuff $"DISPLAY=:0.0 chromium-browser https://stackoverflow.com/\n" #$ permette di digitare il \n e \n serve per inviare il comando
+screen -S nome_screen -p 0 -X quit serve per uscire dallo screen
