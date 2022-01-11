@@ -51,3 +51,7 @@ fwupdmgr to manage firmware updates for devices
 Redirect traffic for local ip through VPN
 Linux: "route add -host your.ec2.ip.address gw the.remote.pptp.address"
 Windows: "route add your.ec2.ip.address mask 255.255.255.255 the.remote.pptp.address"
+
+screen 
+screen -dmS nome_screen sh
+screen -S nome_screen -X stuff $"DISPLAY=:0.0 chromium-browser https://stackoverflow.com/\n" #$ permette di digitare il \n e \n serve per inviare il comando
