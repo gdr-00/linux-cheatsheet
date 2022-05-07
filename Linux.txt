@@ -58,6 +58,14 @@ screen -S nome_screen -X stuff $"DISPLAY=:0.0 chromium-browser https://stackover
 screen -S nome_screen -p 0 -X quit serve per uscire dallo screen
 
 wsl windows host
+in C:\Program Files\PostgresSQL\$VERSION\data verify postgresql.conf = '*'
+in C:\Program Files\PostgresSQL\$VERSION\data add in g_hba.conf
+# IPv4 local connections:
+host    all             all             127.0.0.1/32            md5
+host    all             all             172.0.0.0/8             md5
+
+restart service postgres
+
 # Add DNS entry for Windows host
 if ! $(cat /etc/hosts | grep -q 'winhost'); then
   echo 'Adding DNS entry for Windows host in /etc/hosts'
