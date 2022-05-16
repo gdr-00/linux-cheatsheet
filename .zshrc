@@ -5,10 +5,13 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # Path to maven for intellij
-export M2_HOME="/usr/share/maven"
+export M2_HOME=/usr/local/apache-maven/apache-maven-3.8.5
+export M2=$M2_HOME/bin
+export MAVEN_OPTS="-Xms256m -Xmx512m"
+export PATH=$M2:$PATH
 
 #Path to JAVA_HOME for mvn java version used
-export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
 
 # Add DNS entry for Windows host
 if ! $(cat /etc/hosts | grep -q 'winhost'); then
